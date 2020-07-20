@@ -29,6 +29,16 @@ span{
     font-family: Sunflower;
 }
 
+.blind{
+    width: 0px;    
+    height: 0px;
+    text-indent: -999999;
+    position: absolute;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
 .vid{
     width: 100%;
     height: 100%;
@@ -163,8 +173,27 @@ span{
     display: block;
 }
 
+.sns{
+    color: #fff;
+    position: fixed;
+    top: 60px;
+    right: 50px;
+}
 
+.sns li{
+    display:inline-block;
+    font-size:25px;
+    color:#b9fb05;
+    opacity: 0.5;
+    margin-left: 20px;
+    transition: 0.5s all;
+}
 
+.sns li:hover{
+    transform: scale(1.4);
+    opacity: 1;
+    /* font-size: 35px; */
+}
 
 
 
