@@ -325,11 +325,21 @@ span {
 }
 
 
-.side>.con>p>em {
+.side > .con > p > em {
     font: bold normla 16px/1.7 arial;
     color: #a0bd50;
     display: inline-block;
 }
+
+.side .btnContents{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    color: #b9fb05;
+    font-size: 60px;
+    transform: skew(40deg);
+}
+
 
 
 
