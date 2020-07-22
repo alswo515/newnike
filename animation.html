@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 애니메이션</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation-name: boxani;
+            animation-iteration-count: 1;
+            /* 진행횟수 */
+            /* animation-duration: 3s; */
+            /* 진행시간 */
+            /* animation-delay: 0s; */
+            /* 대기시간 */
+            /* animation-direction: normal; */
+            /* 애니메이션 진행방향 alternate속성은 반복한다 */
+            /* animation-timing-function: ease; */
+            /* 애니메이션 속도곡선을 지정 */
+            /* animation-fill-mode: forwards; */
+            /* 애니메이션 필모드 값을 both 나 forwards 값을 쓰면 끝나는 지점에서 머무른다 */
+            animation: boxani 3s 0.5s 1 alternate;
+            /* 애니메이션 연결속성 사용자지정이름 애니메이션 딜레이 애니메이션 대기시간 (생략이가능하다) 애니메이션 반복횟수 */
+            /* 주로애나메이션 이름이나 시간 반복횟수를 많이쓴다 */
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        .ball{
+            position: relative;
+            left: 100px;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #000;
+            animation: tongtong 1s infinite alternate ease-in;
+        }
+
+
+        @keyframes boxani{
+            0%{}
+            /* from은 시작시점 */
+            100%{border-radius: 50%; transform: translate(600px) translateY(1000%) rotate(1turn) scale(0.6);}
+            /* to는 끝나는 시점 */
+        }
+        /* css 애니메이션기본 문법 @keyframes 사용자지정이름 */
+        @keyframes tongtong{
+            0%{
+                top: 0px;
+            }
+            95%{
+                width: 100px;
+                height: 100px;
+            }
+
+            to{
+                width: 85px;
+                height: 90px;
+                top: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        
+    </div>
+
+    <div class="ball">
+
+    </div>
+
+
+</body>
+</html>
